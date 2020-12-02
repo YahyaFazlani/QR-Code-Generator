@@ -1,0 +1,4 @@
+.vscode/
+env/
+db.sqllite3
+local_settings.py
