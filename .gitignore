@@ -1,5 +1,5 @@
 __pycache__/
 .vscode/
 env/
-db.sqllite3
+db.sqlite3
 local_settings.py
