@@ -13,7 +13,7 @@ SECRET_KEY = 'ile=waf_+$k+x9&2cjs%ab^(i0g@h)9y*5$$=7k#4mx$nb!1tr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
