@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% block title %}{% endblock %}</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css"
+    integrity="sha512-kJ30H6g4NGhWopgdseRb8wTsyllFUYIx3hiUwmGAkgA9B/JbzUBDQVr2VVlWGde6sdBVOG7oU8AL35ORDuMm8g=="
+    crossorigin="anonymous" />
+
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/errorpage.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/select.css') }}">
+</head>
+
+<body class="center">
+
+  <div id="notfound">
+    <div class="notfound-bg">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="notfound">
+      <div class="notfound-code">
+        <h1>{% block errorcode %}{% endblock %}</h1>
+      </div>
+      <h2>{% block error %}{% endblock %}</h2>
+      <p>{% block errormessage %}{% endblock %}</p>
+      <a href="{{ url_for('index')}}" class="button">Homepage</a>
+
+    </div>
+  </div>
+
+</body>

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %} WiFi QR Code Generator {% endblock %}
+
+{% block content %}
+
+<main>
+  <article>
+    <h1 id="heading">WiFi QR Code Generator</h1>
+    <form action="" method="POST" autocomplete="off">
+      
+      <div class="vertical-center floating-form">
+        <!-- SSID Field -->
+        <div class="field field-div">
+          <label for="ssid" class="text-input-label">
+            SSID
+          </label>
+          <input class="input is-rounded text-input" type="text" name='ssid' required placeholder="eg. MyWifi, HomeWIfi"
+            autocomplete="off" id="ssid">
+        </div>
+
+        <!-- Encryption Field -->
+        <div class="select mb-2 is-rounded">
+          <select name='encryption' id='encryption' class="box-shadow">
+            <option value="WPA" selected>WPA/WPA2</option>
+            <option value="WEP">WEP</option>
+            <option value="nopass">None</option>
+          </select>
+        </div>
+
+        <!-- Password Field -->
+        <div class="field field-div" id="password-field">
+          <label for="password" class="text-input-label">Password</label>
+          <p class="control has-icons-left">
+            <input class="input text-input is-rounded" type="password" name="password" id="password"
+              placeholder="eg. MyPassword, 12345" autocomplete="off" required>
+            <span class="icon is-small is-left lock-icon">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+        </div>
+
+        <!-- Hidden Checkbox -->
+        <div style='padding:10px;'>
+          <label for="hidden" style='color:black' class="checkbox">
+            <input class="box-shadow" type="checkbox" name="hidden" id="hidden">
+            Hidden
+          </label>
+        </div>
+
+        <div>
+          <button class="button box-shadow is-rounded">Generate</button>
+        </div>
+
+      </div>
+    </form>
+  </article>
+</main>
+{% endblock %}
+
+{% block js %}
+<script src=""></script>
+{% endblock%}

@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background: rgb(255, 255, 255);
+}
+
+#heading {
+  margin: 10% 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  color: black;
+}
+
+input.input {
+  margin: 2% 30px;
+  padding: 0.5em;
+  padding-left: 1em;
+  padding-left: 1em;
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+  box-shadow: none;
+}
+
+.box-shadow a {
+  color: rgb(54, 54, 54);
+  text-decoration: none;
+}
+
+.field-div {
+  text-align: left;
+  font-weight: bold;
+}
+
+.floating-form {
+  box-shadow: 0px 0 30px rgb(195, 195, 195);
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 90%;
+  border-radius: 30px;
+  padding: 20px;
+  left: 5%;
+}
+
+.lock-icon {
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+.text-input {
+  width: 84% !important;
+  box-shadow: 0px 0 10px rgb(195, 195, 195) !important;
+}
+
+.text-input-label {
+  margin-left: 40px;
+  color: black;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.box-shadow {
+  box-shadow: 0px 0 10px rgb(195, 195, 195) !important;
+}
