@@ -1,23 +1,22 @@
-from re import template
-from django.http.response import HttpResponse, HttpResponseNotAllowed
 from django.shortcuts import render
-from django.views.defaults import bad_request, page_not_found, server_error, permission_denied
+from django.views.defaults import bad_request, page_not_found, server_error
 from base64 import b64encode
+from django.core.exceptions import SuspiciousOperation
 from io import BytesIO
 
 from wifi_qrcode_generator import wifi_qrcode
 
 
 def index(request):
+  # raise SuspiciousOperation
   return render(request, "WiFi_QR_Code_Generator/index.html", status=405)
 
 
 def result(request):
   # Form variables
   ssid = request.POST.get("ssid", None)
-  print(ssid)
   if ssid == None:
-    return render(request, "Error Pages/405.html", status=405)
+    raise SuspiciousOperation
   password = request.POST.get("password")
   encryption = request.POST.get("encryption")
   hidden = request.POST.get("hidden", default=False)
@@ -51,3 +50,7 @@ def handler_404(request, exception):
 
 def handler_500(request):
   return server_error(request, template_name="Error Pages/500.html")
+
+
+def handler_400(request, exception):
+  return bad_request(request, exception, template_name="Error Pages/400.html")

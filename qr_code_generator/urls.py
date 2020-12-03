@@ -10,3 +10,4 @@ urlpatterns = [
 
 handler404 = 'WiFi_QR_Code_Generator.views.handler_404'
 handler500 = 'WiFi_QR_Code_Generator.views.handler_500'
+handler400 = 'WiFi_QR_Code_Generator.views.handler_400'
