@@ -1,6 +1,6 @@
-# Wifi-QR-Code-Generator
+# QR-Code-Generator
 
-This is a Wifi QR Code Flask Project I created as a side project.
+This is a QR Code Django Project I created as a side project.
 
 ### Prerequisites
 * Python (v3.8+) installed.
