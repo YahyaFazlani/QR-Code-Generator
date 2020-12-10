@@ -10,6 +10,9 @@ def google_file(request):
   return render(request, "google5c02155bdaa39045.html")
 
 
+def sitemap(request):
+  return render(request, "sitemap.xml")
+
 def handler_404(request, exception):
   return page_not_found(request, exception, template_name="Error Pages/404.html")
 
