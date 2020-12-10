@@ -1,0 +1,16 @@
+{% extends "base.html" %} 
+{% block title %}Your QR Code{% endblock %}
+{% block content %}
+
+<main>
+  <article>
+    <h1 id="heading">Your QR Code</h1>
+    <img src="data:image/png;base64,{{ image }}" alt="QR Code" /><br>
+    <div>
+      <button class="button box-shadow is-rounded"><a href="data:image/png;base64,{{ image }}"
+          download="QR Code.png">Download</a></button>
+    </div>
+  </article>
+</main>
+
+{% endblock %}

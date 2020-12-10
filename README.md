@@ -38,10 +38,10 @@ pip install -r requirements.txt
 
 #### Run the app
 ```shell
-python app.py
+python manage.py runserver
 ```
 ## Read carefully if contributing
-***Note: If you would like to contribute please feel free to do so in any aspect like spelling errors, better styles, improved code, etc. but if you are editing the html files in the templates directory then please do minimize them as .min.html files and replace the old ones the .min files are the ones being served or if you are adding a new url please add it to the sitemap.xml. Thank you!*** 😊
+***Note: If you would like to contribute please feel free to do so in any aspect like spelling errors, better styles, improved code, etc. if you are adding a new url please add it to the sitemap.xml. Thank you!*** 😊
 
 
 #### This project is under [The Mit License](https://opensource.org/licenses/MIT)

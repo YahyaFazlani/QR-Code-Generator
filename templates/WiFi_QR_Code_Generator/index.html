@@ -8,7 +8,7 @@
 <main>
   <article>
     <h1 id="heading">WiFi QR Code Generator</h1>
-    <form action="{% url 'wifi_result' %}" method="POST" autocomplete="off">
+    <form action="{% url 'wifiQR_result' %}" method="POST" autocomplete="off">
       {% csrf_token %}
       <div class="vertical-center floating-form">
         <!-- SSID Field -->
@@ -21,13 +21,17 @@
         </div>
 
         <!-- Encryption Field -->
-        <div class="select mb-2 is-rounded">
+        <div class="field-div">
+          <label for="encryption" style="text-align: left;" class="text-input-label ml">Encryption</label><br>
+        </div>
+        <div class="select is-rounded field-div field mt-3">
           <select name='encryption' id='encryption' class="box-shadow">
             <option value="WPA" selected>WPA/WPA2</option>
             <option value="WEP">WEP</option>
             <option value="nopass">None</option>
           </select>
         </div>
+
 
         <!-- Password Field -->
         <div class="field field-div" id="password-field">

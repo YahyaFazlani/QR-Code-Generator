@@ -3,19 +3,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ile=waf_+$k+x9&2cjs%ab^(i0g@h)9y*5$$=7k#4mx$nb!1tr'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -25,7 +12,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'WiFi_QR_Code_Generator.apps.WifiQrCodeGeneratorConfig'
+    'WiFi_QR_Code_Generator.apps.WifiQrCodeGeneratorConfig',
+    'Text_link_QR_Code_Generator.apps.TextLinkQrCodeGeneratorConfig',
+    'Pages.apps.PagesConfig',
 ]
 
 MIDDLEWARE = [
@@ -57,17 +46,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'qr_code_generator.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation
@@ -111,3 +89,8 @@ STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = [
     BASE_DIR / 'qr_code_generator/static'
 ]
+
+try:
+  from .local_settings import *
+except ImportError:
+  pass

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<div class="center">
+<h1 class="m-6 heading" style="font-size: 2em;"><a href="{% url 'wifiQR_index' %}">WiFi QR Code Generator</a></h1>
+<h1 class="m-6 heading" style="font-size: 2em;"><a href="{% url 'linkQR_index' %}">Link/Text QR Code Generator</a></h1>
+
+</div>
+{% endblock content %}

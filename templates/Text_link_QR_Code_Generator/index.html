@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Link/Text QR Code Generator {% endblock %}
+
+{% block content %}
+
+<main>
+  <article>
+    <h1 id="heading">Link/Text QR Code Generator</h1>
+    <form action="{% url 'linkQR_result' %}" method="POST" autocomplete="off">
+      {% csrf_token %}
+      <div class="vertical-center floating-form">
+        <!-- SSID Field -->
+        <div class="field field-div">
+          <label for="link" class="text-input-label">
+            Link/Text
+          </label>
+          <input class="input is-rounded text-input" type="text" name='link' required placeholder="a link or some text"
+            autocomplete="off" id="link">
+        </div>
+
+        <div>
+          <button class="button box-shadow is-rounded">Generate</button>
+        </div>
+
+      </div>
+    </form>
+  </article>
+</main>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock%}
