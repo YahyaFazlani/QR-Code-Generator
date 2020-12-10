@@ -3,8 +3,6 @@ let password = document.getElementById('password-field');
 let passwordInput = document.getElementById('password');
 let form = document.querySelector('form');
 
-form.reset();
-
 encryption.addEventListener('input', function () {
   password.style.display =
     encryption.value === 'WEP' || encryption.value === 'WPA' ? 'block' : 'none';
