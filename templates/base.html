@@ -22,7 +22,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" as="style" onload="this.rel='stylesheet'" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="{% static 'css/mediaqueries.css' %}" media="(min-width: 850px)">
-  <link rel="preload" as="style" onload="this.rel='stylesheet'" href="{% static 'css/select.css' %}">
+  <link rel="stylesheet" disabled href="{% static 'css/select.css' %}" id="select">
 
   <title>{% block title %}{% endblock title %}</title>
 </head>
@@ -32,6 +32,7 @@
 
   <!-- Javascript -->
   {% block js %}{% endblock %}
+  <script src="{% static 'js/select.js' %}"></script>
 </body>
 
 </html>
