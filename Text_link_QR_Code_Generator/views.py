@@ -10,19 +10,19 @@ def index(request):
 
 
 def result(request):
-#   link = request.POST.get("link", None)
-#   if link == None:
-#     raise SuspiciousOperation
-#   qr_code = pyqrcode.create(link)
+  link = request.POST.get("link", None)
+  if link == None:
+    raise SuspiciousOperation
+  qr_code = pyqrcode.create(link)
 
-#   output = BytesIO()
-#   qr_code.png(output, scale=11)
-#   image = output.getvalue()
-#   output.close()
-#   image = str(b64encode(image))[2:-1]
+  output = BytesIO()
+  qr_code.png(output, scale=11)
+  image = output.getvalue()
+  output.close()
+  image = str(b64encode(image))[2:-1]
 
-#   context = {
-#       'image': image
-#   }
+  context = {
+      'image': image
+  }
 
-  return redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+  return render(request, "Text_link_QR_Code_Generator/result.html", context)
